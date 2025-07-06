@@ -1,0 +1,97 @@
+.my-travels-page {
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+    min-height: calc(100vh - 200px);
+}
+
+.current-plan {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+
+.current-plan h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.plan-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.detail-item {
+    margin-bottom: 0.8rem;
+}
+
+.detail-label {
+    font-weight: 500;
+    color: #555;
+    margin-right: 0.5rem;
+}
+
+.detail-value {
+    color: #333;
+}
+
+.no-plan {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.no-plan h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.no-plan p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.weather-card h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.weather-details h3 {
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.weather-details p {
+    margin-bottom: 0.3rem;
+    color: #666;
+}
+
+.weather-advice {
+    color: #1e88e5;
+    font-weight: 500;
+}
+
+.weather-icon i {
+    font-size: 2rem;
+    color: #1e88e5;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .plan-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .weather-day {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .weather-icon {
+        margin-bottom: 0.5rem;
+    }
+}

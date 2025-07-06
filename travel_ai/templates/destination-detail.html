@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>目的地详情 - 旅游网</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/destination-detail.css">
+</head>
+<body>
+    <header>
+        <div class="logo">旅游网</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="destinations.html">目的地</a></li>
+                <li><a href="packages.html">套餐</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="my-travels.html">我的出行</a></li>
+            </ul>
+        </nav>
+        <div class="user-area">
+            <span class="user-greeting" id="userGreeting"></span>
+            <div class="user-icon" id="userIcon">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="destination-detail-page">
+        <div class="destination-hero" id="destinationHero">
+            <!-- 这里将通过JS动态加载目的地主图 -->
+        </div>
+        
+        <div class="container">
+            <div class="destination-header">
+                <h1 id="destinationName">目的地名称</h1>
+                <div class="destination-meta">
+                    <span id="destinationLocation"><i class="fas fa-map-marker-alt"></i> 位置</span>
+                    <span id="destinationRating"><i class="fas fa-star"></i> 评分</span>
+                </div>
+            </div>
+            
+            <div class="destination-content">
+                <div class="destination-description">
+                    <h2><i class="fas fa-info-circle"></i> 简介</h2>
+                    <p id="destinationDescription">这里将加载目的地描述...</p>
+                </div>
+                
+                <div class="destination-highlights">
+                    <h2><i class="fas fa-map-marked-alt"></i> 必去景点</h2>
+                    <div class="highlights-grid" id="highlightsGrid">
+                        <!-- 这里将通过JS动态加载景点 -->
+                    </div>
+                </div>
+                
+                <div class="destination-info-grid">
+                    <div class="info-card weather-card">
+                        <h3><i class="fas fa-cloud-sun"></i> 最佳旅行时间</h3>
+                        <p id="bestTimeToVisit">这里将加载最佳旅行时间...</p>
+                    </div>
+                    
+                    <div class="info-card tips-card">
+                        <h3><i class="fas fa-lightbulb"></i> 旅行小贴士</h3>
+                        <ul id="travelTips">
+                            <!-- 这里将通过JS动态加载小贴士 -->
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card packages-card">
+                        <h3><i class="fas fa-suitcase"></i> 相关套餐</h3>
+                        <div class="packages-list" id="relatedPackages">
+                            <!-- 这里将通过JS动态加载相关套餐 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 旅游网 版权所有</p>
+        <p>联系我们: contact@travel.com</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-weixin"></i></a>
+            <a href="#"><i class="fab fa-weibo"></i></a>
+            <a href="#"><i class="fab fa-qq"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/destination-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>探索世界 - 旅游网</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">旅游网</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="destinations.html">目的地</a></li>
+                <li><a href="packages.html">套餐</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="my-travels.html">我的出行</a></li>
+            </ul>
+        </nav>
+        <div class="user-area">
+            <span class="user-greeting" id="userGreeting"></span>
+            <div class="user-icon" id="userIcon">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </header>
+    
+    <main class="index-page">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>探索世界的美丽</h1>
+                <p>发现全球最令人惊叹的旅游目的地，体验不同文化的魅力</p>
+                <a href="destinations.html" class="btn">查看热门目的地</a>
+            </div>
+        </section>
+        
+        <div class="search-container" id="searchContainer">
+            <div class="search-bar">
+                <input type="text" placeholder="搜索目的地、城市或国家..." id="searchInput">
+                <button id="searchBtn"><i class="fas fa-search"></i> 搜索</button>
+                <button class="ai-btn" id="aiAssistantBtn"><i class="fas fa-robot"></i> AI助手</button>
+                <button class="filter-btn" id="filterBtn"><i class="fas fa-sliders-h"></i> 筛选</button>
+            </div>
+            
+            <div class="filter-options" id="filterOptions">
+                <div class="filter-tags-container">
+                    <h3>旅行类型</h3>
+                    <div class="filter-tags">
+                        <div class="filter-tag" data-type="type" data-value="文化">文化之旅</div>
+                        <div class="filter-tag" data-type="type" data-value="自然">自然风光</div>
+                        <div class="filter-tag" data-type="type" data-value="美食">美食体验</div>
+                        <div class="filter-tag" data-type="type" data-value="冒险">冒险活动</div>
+                        <div class="filter-tag" data-type="type" data-value="购物">购物天堂</div>
+                    </div>
+                    
+                    <h3>预算范围</h3>
+                    <div class="filter-tags">
+                        <div class="filter-tag" data-type="budget" data-value="经济">经济型</div>
+                        <div class="filter-tag" data-type="budget" data-value="中等">中等预算</div>
+                        <div class="filter-tag" data-type="budget" data-value="豪华">豪华型</div>
+                    </div>
+                    
+                    <h3>出行方式</h3>
+                    <div class="filter-tags">
+                        <div class="filter-tag" data-type="transport" data-value="飞机">飞机</div>
+                        <div class="filter-tag" data-type="transport" data-value="火车">火车</div>
+                        <div class="filter-tag" data-type="transport" data-value="自驾">自驾</div>
+                    </div>
+                    
+                    <h3>旅行人数</h3>
+                    <div class="filter-tags">
+                        <div class="filter-tag" data-type="people" data-value="1人">1人</div>
+                        <div class="filter-tag" data-type="people" data-value="2人">情侣/2人</div>
+                        <div class="filter-tag" data-type="people" data-value="家庭">家庭</div>
+                        <div class="filter-tag" data-type="people" data-value="团体">团体</div>
+                    </div>
+                    
+                    <h3>旅行时长</h3>
+                    <div class="filter-tags">
+                        <div class="filter-tag" data-type="duration" data-value="3天">3日游</div>
+                        <div class="filter-tag" data-type="duration" data-value="5天">5日游</div>
+                        <div class="filter-tag" data-type="duration" data-value="7天">7日游</div>
+                        <div class="filter-tag" data-type="duration" data-value="10天">10日游</div>
+                    </div>
+                </div>
+                
+                <div class="filter-actions">
+                    <button class="clear-btn" id="clearFiltersBtn">清除筛选</button>
+                    <button class="apply-filter-btn" id="applyFiltersBtn">应用筛选</button>
+                </div>
+            </div>
+            
+            <div class="selected-tags" id="selectedTags">
+                <!-- 这里会显示用户已选择的筛选标签 -->
+            </div>
+        </div>
+        
+        <section class="recommended-section" id="recommendedSection">
+            <h2><i class="fas fa-star"></i> 为您推荐</h2>
+            <div class="destination-grid" id="recommendedDestinations">
+                <!-- 这里将通过JS动态加载推荐目的地 -->
+            </div>
+        </section>
+        
+        <section class="all-destinations">
+            <h2><i class="fas fa-globe-asia"></i> 探索目的地</h2>
+            <div class="destination-grid" id="allDestinations">
+                <!-- 这里将通过JS动态加载所有目的地 -->
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 旅游网 版权所有</p>
+        <p>联系我们: contact@travel.com</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-weixin"></i></a>
+            <a href="#"><i class="fab fa-weibo"></i></a>
+            <a href="#"><i class="fab fa-qq"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

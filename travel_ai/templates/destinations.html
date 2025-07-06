@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>目的地 - 旅游网</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/destinations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">旅游网</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="destinations.html" class="active">目的地</a></li>
+                <li><a href="packages.html">套餐</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="my-travels.html">我的出行</a></li>
+            </ul>
+        </nav>
+        <div class="user-area">
+            <span class="user-greeting" id="userGreeting"></span>
+            <div class="user-icon" id="userIcon">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="destinations-page">
+        <div class="destinations-header">
+            <h1>探索我们的目的地</h1>
+            <p>发现全球最受欢迎的旅游地点</p>
+        </div>
+        
+        <div class="destinations-filter">
+            <div class="filter-group">
+                <label for="continentFilter">按大洲筛选</label>
+                <select id="continentFilter">
+                    <option value="">所有大洲</option>
+                    <option value="asia">亚洲</option>
+                    <option value="europe">欧洲</option>
+                    <option value="africa">非洲</option>
+                    <option value="north-america">北美洲</option>
+                    <option value="south-america">南美洲</option>
+                    <option value="oceania">大洋洲</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="seasonFilter">最佳季节</label>
+                <select id="seasonFilter">
+                    <option value="">任何季节</option>
+                    <option value="spring">春季</option>
+                    <option value="summer">夏季</option>
+                    <option value="autumn">秋季</option>
+                    <option value="winter">冬季</option>
+                </select>
+            </div>
+            
+            <button class="filter-btn" id="applyDestinationsFilter">应用筛选</button>
+        </div>
+        
+        <div class="destinations-grid" id="destinationsGrid"></div>
+    </main>
+
+    <script src="js/common.js"></script>
+    <script src="js/destinations.js"></script>
+</body>
+</html>

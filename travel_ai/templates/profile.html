@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人空间 - 旅游网</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <header>
+        <div class="logo">旅游网</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="destinations.html">目的地</a></li>
+                <li><a href="packages.html">套餐</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="my-travels.html">我的出行</a></li>
+            </ul>
+        </nav>
+        <div class="user-area">
+            <span class="user-greeting" id="userGreeting"></span>
+            <div class="user-icon" id="userIcon">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="profile-page">
+        <div class="profile-header">
+            <div class="profile-avatar" id="profileAvatar">
+                <img id="avatarImage" src="" alt="头像">
+                <div class="avatar-placeholder">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+            <div class="profile-info">
+                <h1 id="profileUsername">用户名</h1>
+                <p id="profileBio">暂无个人简介</p>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span id="visitedCount">0</span>
+                        <span>去过的地方</span>
+                    </div>
+                    <div class="stat-item">
+                        <span id="wishlistCount">0</span>
+                        <span>心愿单</span>
+                    </div>
+                </div>
+            </div>
+            <a href="edit-profile.html" class="edit-profile-btn">编辑资料</a>
+        </div>
+        
+        <div class="profile-tabs">
+            <div class="profile-tab active" data-tab="preferences">旅游偏好</div>
+            <div class="profile-tab" data-tab="visited">去过的地方</div>
+            <div class="profile-tab" data-tab="wishlist">心愿单</div>
+        </div>
+        
+        <div class="profile-content">
+            <!-- 旅游偏好 -->
+            <div class="tab-content active" id="preferencesTab">
+                <div class="preference-section">
+                    <h2><i class="fas fa-heart"></i> 喜欢的旅游类型</h2>
+                    <p class="section-description">选择您喜欢的旅游类型，我们会为您推荐更合适的目的地</p>
+                    <div class="preference-options" id="travelTypes"></div>
+                </div>
+                
+                <div class="preference-section">
+                    <h2><i class="fas fa-calendar-alt"></i> 偏好的季节</h2>
+                    <p class="section-description">选择您偏好的旅游季节</p>
+                    <div class="preference-options" id="favoriteSeasons"></div>
+                </div>
+                
+                <div class="preference-section">
+                    <h2><i class="fas fa-wallet"></i> 预算范围</h2>
+                    <p class="section-description">设置您的旅游预算范围</p>
+                    <div class="preference-options" id="budgetOptions"></div>
+                    <div class="custom-budget-input" id="customBudgetInput">
+                        <input type="text" id="customBudget" placeholder="例如: 1000-5000">
+                        <button id="saveCustomBudget">保存</button>
+                    </div>
+                </div>
+                
+                <div class="preference-section">
+                    <h2><i class="fas fa-utensils"></i> 饮食偏好</h2>
+                    <p class="section-description">选择您喜欢的饮食类型</p>
+                    <div class="preference-options" id="foodPreferences"></div>
+                </div>
+                
+                <div class="preference-section">
+                    <h2><i class="fas fa-bed"></i> 住宿偏好</h2>
+                    <p class="section-description">选择您偏好的住宿类型</p>
+                    <div class="preference-options" id="accommodationPreferences"></div>
+                </div>
+                
+                <div class="preference-section">
+                    <h2><i class="fas fa-running"></i> 活动偏好</h2>
+                    <p class="section-description">选择您喜欢的旅游活动</p>
+                    <div class="preference-options" id="activityPreferences"></div>
+                </div>
+                
+                <button class="save-btn" id="savePreferencesBtn">
+                    <i class="fas fa-save"></i> 保存偏好设置
+                </button>
+                <div class="message" id="preferencesMessage"></div>
+            </div>
+            
+            <!-- 去过的地方 -->
+            <div class="tab-content" id="visitedTab">
+                <div class="section-header">
+                    <h2><i class="fas fa-map-marked-alt"></i> 我去过的地方</h2>
+                    <button class="add-btn" id="addVisitedBtn">
+                        <i class="fas fa-plus"></i> 添加去过的地方
+                    </button>
+                </div>
+                
+                <div class="visited-destinations" id="visitedDestinations">
+                    <p class="no-data">您还没有添加去过的地方</p>
+                </div>
+            </div>
+            
+            <!-- 心愿单 -->
+            <div class="tab-content" id="wishlistTab">
+                <div class="section-header">
+                    <h2><i class="fas fa-heart"></i> 我的心愿单</h2>
+                    <button class="add-btn" id="addWishlistBtn">
+                        <i class="fas fa-plus"></i> 添加心愿目的地
+                    </button>
+                </div>
+                
+                <div class="wishlist-destinations" id="wishlistDestinations">
+                    <p class="no-data">您的心愿单是空的</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 目的地选择器模态框 -->
+    <div class="modal" id="destinationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>选择目的地</h2>
+                <button class="close-btn" id="closeModalBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="destination-selector-grid" id="destinationSelector"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

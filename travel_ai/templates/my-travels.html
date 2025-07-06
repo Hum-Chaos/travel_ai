@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的出行 - 旅游网</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/my-travels.css">
+</head>
+<body>
+    <header>
+        <div class="logo">旅游网</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="destinations.html">目的地</a></li>
+                <li><a href="packages.html">套餐</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="my-travels.html" class="active">我的出行</a></li>
+            </ul>
+        </nav>
+        <div class="user-area">
+            <span class="user-greeting" id="userGreeting"></span>
+            <div class="user-icon" id="userIcon">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="my-travels-page">
+        <div class="container">
+            <div class="my-travels-nav">
+                <a href="my-travels.html" class="active">出行计划</a>
+                <a href="my-travels-history.html">历史行程</a>
+                <a href="my-travels-wishlist.html">心愿单</a>
+            </div>
+            
+            <div id="currentTravelPlan">
+                <!-- 这里将通过JS动态加载当前出行计划 -->
+            </div>
+            
+            <div class="weather-card" id="weatherInfo">
+                <!-- 这里将通过JS动态加载天气信息 -->
+            </div>
+            
+            <div class="safety-info" id="safetyInfo">
+                <!-- 这里将通过JS动态加载安全信息 -->
+            </div>
+            
+            <div class="culture-tips" id="cultureTips">
+                <!-- 这里将通过JS动态加载文化提示 -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 旅游网 版权所有</p>
+        <p>联系我们: contact@travel.com</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-weixin"></i></a>
+            <a href="#"><i class="fab fa-weibo"></i></a>
+            <a href="#"><i class="fab fa-qq"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/my-travels.js"></script>
+</body>
+</html>

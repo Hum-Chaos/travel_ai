@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI旅行助手 - 旅游网</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/ai-assistant.css">
+</head>
+<body>
+    <header>
+        <div class="logo">旅游网</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="destinations.html">目的地</a></li>
+                <li><a href="packages.html">套餐</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="my-travels.html">我的出行</a></li>
+            </ul>
+        </nav>
+        <div class="user-area">
+            <span class="user-greeting" id="userGreeting"></span>
+            <div class="user-icon" id="userIcon">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="ai-assistant-page">
+        <div class="ai-assistant-container">
+            <div class="ai-header">
+                <h1><i class="fas fa-robot"></i> AI旅行助手</h1>
+                <p>随时为您解答旅行相关问题，提供个性化建议</p>
+            </div>
+            
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- 初始欢迎消息 -->
+                    <div class="message ai-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>您好！我是您的AI旅行助手。我可以为您解答旅行相关问题，提供目的地推荐、行程规划、预算建议等。请问有什么可以帮您的吗？</p>
+                            <div class="quick-questions">
+                                <p>您可以尝试问我：</p>
+                                <ul>
+                                    <li>巴黎有哪些必去的景点？</li>
+                                    <li>适合家庭旅游的目的地推荐</li>
+                                    <li>如何规划一周的日本行程？</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input">
+                    <input type="text" placeholder="输入您的问题..." id="userInput">
+                    <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 旅游网 版权所有</p>
+        <p>联系我们: contact@travel.com</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-weixin"></i></a>
+            <a href="#"><i class="fab fa-weibo"></i></a>
+            <a href="#"><i class="fab fa-qq"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/ai-assistant.js"></script>
+</body>
+</html>
